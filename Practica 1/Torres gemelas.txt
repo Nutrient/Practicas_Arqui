@@ -1,0 +1,27 @@
+Hacerlo en C
+Tiene que ser recursivo
+Tiene 3 torres y n discos a utilizar
+Torre inicial, torre auxiliar, torre final
+
+En una torre de Hanoi de 3 tiene que ser forzoso recursividad
+Origen -> Fin
+Origen -> Auxiliar
+Fin -> Auxiliar
+Origen -> Fin
+Auxiliar -> Origen
+Auxiliar -> Fin
+Origen -> Fin
+
+Algoritmo
+	Hanoi (n, Origen, Auxiliar, Destino)
+N != 1
+	Hanoi (n-1, Org , destino, auxiliar)
+	Hanoi (Dn, Origen, destino, auxiliar)
+	Hanoi (n-1, Auxiliar, Origen, Destino)
+Pero cuando n == 1
+	Hanoi ( Dn, Origen, auxiliar ,destino)
+
+
+
+
+
