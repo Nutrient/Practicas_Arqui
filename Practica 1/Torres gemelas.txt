@@ -21,6 +21,59 @@ N != 1
 Pero cuando n == 1
 	Hanoi ( Dn, Origen, auxiliar ,destino)
 
+Presudocodigo y codigo c, ya que no recuerdo que pedo bien con lo de pseudo
+Me preguntas luego si algo no le entiendes al pedo
+
+//===================================================
+//4 parametros
+//===================================================
+void Hanoi (int discos, int ori, int aux, int dest)
+
+int main(){
+	
+	string Origen = "ori";
+	string Auxiliar = "aux";
+	string Destino = "dest";
+	int discos = 0;
+	
+//pedimos la cantidad de discos max sera 8 recordar menos de 9k instrucciones
+	
+//===================================================
+//La cantidad de discos a usar
+//===================================================
+	discos = 3
+
+	hanoi (discos, ori, Aux, Dest);
+
+	return 0;
+
+}
+
+//===================================================
+//Funcion a implementar la recursividad
+//===================================================
+
+void Hanoi (int discos, int ori, int aux, int dest){
+
+	if (discos == 1)
+	{
+	printf ("%s se movio a %s", ori, dest);
+	}
+	else
+	{
+	hanoi (discos-1, ori, dest, aux);
+		printf ("%s se movio a %s, ori, dest);
+	hanoi (n-1, aux, ori, dest);
+	}
+
+}
+
+
+
+
+
+
+
 
 
 
