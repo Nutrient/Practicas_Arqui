@@ -15,7 +15,7 @@ main:
 	add $t0, $t0, $s1
 	addi $t0, $t0, -4
 
-	add $a0, $zero, $t3 
+	
 	
 	
 	#t4 sera el auxiliar para intercambiar valores de variables
@@ -23,14 +23,14 @@ main:
 	j end
 
 Hanoi:	
+	
+	#checamos si estamos hasta el tope
+	beq $t3, 1, Move
+	
 	addi $sp, $sp, -8
 	sw $ra, 0($sp)
 	sw $t3, 4($sp)
-	
-	add $t3, $zero, $a0
-	#checamos si estamos hasta el tope
-	beq $a0, 1, Move
-	addi $a0, $t3, -1 
+	addi $t3, $t3, -1 
 	#hanoi
 	
 	#add $t0, $t0, 4
@@ -75,6 +75,6 @@ Move:
 	addi $t1, $t1, +4
 	addi $t0, $t0, -4	
 
-	j exit
+	jr $ra
 	
 end:
