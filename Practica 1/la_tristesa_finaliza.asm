@@ -1,9 +1,11 @@
 #Erick Cardona Soto Maynez
 #Carlo Bruno Figueroa Barragan
+#All instructions that are commented are left in there in purpouse to show the improvement of the algorithm
+#
 .data
-torre_A: .word 0 0 0 0 0 0 0 0
-torre_B: .word 0 0 0 0 0 0 0 0
-torre_C: .word 0 0 0 0 0 0 0 0
+tower_A: .word 0 0 0 0 0 0 0 0
+tower_B: .word 0 0 0 0 0 0 0 0
+tower_C: .word 0 0 0 0 0 0 0 0
 .text
 
 main: 
@@ -46,7 +48,6 @@ else:
 	#sw $a3, 16($sp)
 	
 	addi $a0, $a0, -1
-	
 	add $t0, $a3, $zero #change memory from AUX -> END  | A C B
 	add $a3, $a2, $zero
 	add $a2, $t0, $zero
@@ -59,8 +60,8 @@ else:
 	lw $s1, 0($a1) #MOVE START
 	sw $s1, 0($a3)
 	sw $zero, 0($a1)
-	addi $a3, $a3, +4
-	addi $a1, $a1, -4
+	#addi $a3, $a3, +4
+	#addi $a1, $a1, -4
 	
 
 		
@@ -69,24 +70,24 @@ else:
 	#addi $a1, $a3, 0
 	#addi $a3, $t0, 0
 	
-	#addi $t0, $a1, 0 
+	#addi $t0, $a1, 0  
 	#addi $a1, $a2, 0
 	#addi $a2, $t0, 0
 	
 	add $t0, $zero, $a1 #change memory from A C B | C B A
-	addi $a1, $a2, 0
-	add $a2, $zero, $a3
-	sub $a3, $t0, 0
+	sub $a1, $a2, 4 #also the previous memory avaliable from origin
+	addi $a2, $a3, 4
+	addi $a3, $t0, 0 #we load the next memory avaliable from aux
 	
-	addi $a1, $a1, -4 
-	addi $a3, $a3, 4
+	#addi $a1, $a1, -4  
+	#addi $a3, $a3, 4
 	jal hanoi
-	addi $a1, $a1, 4
-	addi $a3, $a3, -4
+	#addi $a1, $a1, 4
+	#addi $a3, $a3, -4
 	
 	add $t0, $a1, $zero
-	add $a1, $a3, $zero
-	add $a3, $t0, $zero
+	addi $a1, $a3, -4
+	addi $a3, $t0, 4
 	
 	lw $ra, 0($sp)
 	lw $a0, 4($sp)
