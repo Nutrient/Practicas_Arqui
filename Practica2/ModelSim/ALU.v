@@ -22,6 +22,7 @@ module ALU
 	input [3:0] ALUOperation,
 	input [31:0] A,
 	input [31:0] B,
+	input [4:0] shamt,
 	output reg Zero,
 	output reg [31:0]ALUResult
 );
@@ -33,13 +34,7 @@ localparam ADD = 4'b0011;
 localparam SUB = 4'b0100;
 localparam SRL = 4'b0101;
 localparam SLL = 4'b0110;
-localparam LW  = 4'b0111;
-localparam SW  = 4'b1000;
-localparam BEQ = 4'b1001;
-localparam BNE = 4'b1010;
-localparam J   = 4'b1011;
-localparam JAL = 4'b1100;
-localparam JR  = 4'b1101;
+localparam LUI = 4'b0111;
 
    
    always @ (A or B or ALUOperation)
@@ -49,6 +44,20 @@ localparam JR  = 4'b1101;
 			ALUResult=A + B;
 		  SUB: // sub
 			ALUResult=A - B;
+		  OR: 
+			ALUResult=A | B;
+		  AND:
+			ALUResult=A & B;
+		  NOR:
+			ALUResult= ~(A | B);
+		  SRL:
+			ALUResult= B >> shamt;
+		  SLL:
+			ALUResult= B << shamt;
+		  LUI:
+			ALUResult= {B, 16'b0};
+		  
+			
 
 		default:
 			ALUResult= 0;
