@@ -16,8 +16,8 @@ module Control
 	input [5:0]OP,
 	
 	output RegDst,
-	output BranchEQ,
-	output BranchNE,
+	output BranchEQ_NE,
+	output Jump,
 	output MemRead,
 	output MemtoReg,
 	output MemWrite,
@@ -62,8 +62,8 @@ assign MemtoReg = ControlValues[8];
 assign RegWrite = ControlValues[7];
 assign MemRead = ControlValues[6];
 assign MemWrite = ControlValues[5];
-assign BranchNE = ControlValues[4];
-assign BranchEQ = ControlValues[3];
+assign Jump = ControlValues[4];
+assign BranchEQ_NE = ControlValues[3];
 assign ALUOp = ControlValues[2:0];	
 
 endmodule
