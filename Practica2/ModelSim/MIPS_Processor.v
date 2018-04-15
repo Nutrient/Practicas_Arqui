@@ -46,8 +46,7 @@ assign  PortOut = 0;
 //******************************************************************/
 //******************************************************************/
 // Data types to connect modules
-wire BranchNE_wire;
-wire BranchEQ_wire;
+wire BranchEQ_NE_wire;
 wire RegDst_wire;
 wire NotZeroANDBrachNE;
 wire ZeroANDBrachEQ;
@@ -82,8 +81,7 @@ ControlUnit
 (
 	.OP(Instruction_wire[31:26]),
 	.RegDst(RegDst_wire),
-	.BranchNE(BranchNE_wire),
-	.BranchEQ(BranchEQ_wire),
+	.BranchEQ_NE(BranchEQ_NE_wire),
 	.ALUOp(ALUOp_wire),
 	.ALUSrc(ALUSrc_wire),
 	.RegWrite(RegWrite_wire)
