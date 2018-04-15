@@ -27,7 +27,7 @@ localparam R_Type_ADD    = 9'b111_100000;
 localparam R_Type_SUB    = 9'b111_100010;
 localparam R_Type_SRL    = 9'b111_000010;
 localparam R_Type_SLL    = 9'b111_000000;
-localparam R_TYPE_JR		 = 9'b111_001000;
+localparam R_Type_JR		 = 9'b111_001000;
 
 localparam I_Type_ADDI   = 9'b100_xxxxxx;
 localparam I_Type_ORI    = 9'b101_xxxxxx;

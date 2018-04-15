@@ -59,9 +59,9 @@ localparam BNE = 4'b1001;
 		  LUI:
 			ALUResult= B << 16;
 		  BEQ:
-			ALUResult= {A == B} 1'b0 : 1b1;
+			ALUResult= (A == B) ? 1'b0 : 1'b1;
 		  BNE:
-			ALUResult= {A != B} 1'b0 : 1b1;
+			ALUResult= (A != B) ? 1'b0 : 1'b1;
 		default:
 			ALUResult= 0;
 		endcase // case(control)
