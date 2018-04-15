@@ -39,7 +39,7 @@ localparam BEQ = 4'b1000;
 localparam BNE = 4'b1001;
 
    
-   always @ (A or B or ALUOperation)
+   always @ (A or B or ALUOperation or shamt)
      begin
 		case (ALUOperation)
 		  ADD: // add
