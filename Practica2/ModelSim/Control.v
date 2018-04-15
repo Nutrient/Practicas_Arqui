@@ -18,6 +18,7 @@ module Control
 	output RegDst,
 	output BranchEQ,
 	output BranchNE,
+	output Jump,
 	output MemRead,
 	output MemtoReg,
 	output MemWrite,
