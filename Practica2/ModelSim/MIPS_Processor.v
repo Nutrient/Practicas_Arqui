@@ -80,6 +80,7 @@ wire [31:0] Shifted28_wire;
 wire [31:0] MUX_to_PC_wire;
 wire [31:0] MUX_to_MUX_wire;
 wire [31:0] MUX_ForRetJumpAndJump;
+wire [31:0] MUX_Jal_ReadData_ALUResult_wire;
 integer ALUStatus;
 
 
@@ -221,7 +222,7 @@ Register_File
 	.WriteRegister(WriteRegister_wire),
 	.ReadRegister1(Instruction_wire[25:21]),
 	.ReadRegister2(Instruction_wire[20:16]),
-	.WriteData(MUX_ReadData_ALUResult_wire),
+	.WriteData(MUX_Jal_ReadData_ALUResult_wire),
 	.ReadData1(ReadData1_wire),
 	.ReadData2(ReadData2_wire)
 
