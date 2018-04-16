@@ -58,15 +58,19 @@ wire ALUSrc_wire;
 wire PCSrc_wire;
 wire RegWrite_wire;
 wire Jump_wire;
+wire JumpR_wire;
+wire JumpJal_wire;
 wire Zero_wire;
 wire [2:0] ALUOp_wire;
 wire [3:0] ALUOperation_wire;
 wire [4:0] WriteRegister_wire;
+wire [4:0] MUX_Ra_WriteRegister_wire;
 wire [31:0] MUX_PC_wire;
 wire [31:0] PC_wire;
 wire [31:0] Instruction_wire;
 wire [31:0] ReadData1_wire;
 wire [31:0] ReadData2_wire;
+wire [31:0] ReadData_wire;
 wire [31:0] InmmediateExtend_wire;
 wire [31:0] ReadData2OrInmmediate_wire;
 wire [31:0] ALUResult_wire;
@@ -211,6 +215,32 @@ MUX_ForRTypeAndIType
 
 );
 
+Multiplexer2to1
+#(
+	.NBits(32)
+)
+MUX_ForJalAndReadData_AlUResult
+(
+	.Selector(JumpJal_wire),
+	.MUX_Data0(MUX_ReadData_ALUResult_wire),
+	.MUX_Data1(PC_4_wire),
+
+	.MUX_Output(MUX_Jal_ReadData_ALUResult_wire)
+);
+
+Multiplexer2to1
+#(
+	.NBits(5)
+)
+MUX_WriteRegister_Ra
+(
+	.Selector(JumpJal_wire),
+	.MUX_Data0(WriteRegister_wire),
+	.MUX_Data1(5'b11111),
+
+	.MUX_Output(MUX_Ra_WriteRegister_wire)
+);
+
 
 
 RegisterFile
@@ -219,7 +249,7 @@ Register_File
 	.clk(clk),
 	.reset(reset),
 	.RegWrite(RegWrite_wire),
-	.WriteRegister(WriteRegister_wire),
+	.WriteRegister(MUX_Ra_WriteRegister_wire),
 	.ReadRegister1(Instruction_wire[25:21]),
 	.ReadRegister2(Instruction_wire[20:16]),
 	.WriteData(MUX_Jal_ReadData_ALUResult_wire),
@@ -277,6 +307,11 @@ ArithmeticLogicUnit
 //Added
 
 DataMemory
+#(	 
+	 .DATA_WIDTH(32),
+	 .MEMORY_DEPTH(512)
+
+)
 DataMemory
 (
 	//In
@@ -291,15 +326,7 @@ DataMemory
 	
 );
 
-Multiplexer2to1
-MUX_ForJalAndReadData_AlUResult
-(
-	.Selector(JumpJal_wire),
-	.MUX_Data0(MUX_ReadData_ALUResult_wire),
-	.MUX_Data1(PC_4_wire),
 
-	.MUX_Output(MUX_Jal_ReadData_ALUResult_wire)
-);
 
 
 Multiplexer2to1

@@ -24,14 +24,14 @@ module ProgramMemory
 );
 wire [(DATA_WIDTH-1):0] RealAddress;
 
-assign RealAddress = {2'b0,Address[(DATA_WIDTH-1):2]};
+assign RealAddress = {2'b0,Address[(DATA_WIDTH-24):2]};
 
 	// Declare the ROM variable
 	reg [DATA_WIDTH-1:0] rom[MEMORY_DEPTH-1:0];
 
 	initial
 	begin
-		$readmemh("C:/Users/carso/documents/Practicas_Arqui/Practica2/res/Practica1.dat", rom);
+		$readmemh("C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/res/Practica1.dat", rom);
 	end
 
 	always @ (RealAddress)

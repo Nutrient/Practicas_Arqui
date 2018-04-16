@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim
 vAdder32bits
-Z1 !s110 1523833081
+Z1 !s110 1523915018
 !i10b 1
 !s100 ]H0^NRAm[`J07LMS2@]Pb2
 I6^=Ol6ah[8OOGhclE:3H00
@@ -23,7 +23,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1523833081.000000
+Z5 !s108 1523915018.000000
 !s107 C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Adder32bits.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Adder32bits.v|
 !i113 1
@@ -75,7 +75,7 @@ R6
 R7
 n@a@l@u@control
 vANDGate
-Z9 !s110 1523833082
+Z9 !s110 1523915019
 !i10b 1
 !s100 =@O=aQRi;bazk13J6U>4m3
 IMmAT655KYW;3^3KXI?b^>3
@@ -89,7 +89,7 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1523833082.000000
+Z10 !s108 1523915019.000000
 !s107 C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ANDGate.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ANDGate.v|
 !i113 1
@@ -119,7 +119,7 @@ R6
 R7
 n@control
 vDataMemory
-Z12 !s110 1523833083
+R9
 !i10b 1
 !s100 @OPaVYHbgG?72[TazmZN01
 I7o;JQ2ON5;iC=4Qo`BW5^0
@@ -141,7 +141,7 @@ R6
 R7
 n@data@memory
 vDecoderRegisterFile
-R12
+R9
 !i10b 1
 !s100 WiBBY1;C0OC:8`V5m[Rn51
 IVU_ibJEo3hD4M3zj[GjU`0
@@ -150,12 +150,12 @@ R0
 w1419780743
 8C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DecoderRegisterFile.v
 FC:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DecoderRegisterFile.v
-Z13 L0 12
+Z12 L0 12
 R4
 r1
 !s85 0
 31
-Z14 !s108 1523833083.000000
+R10
 !s107 C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DecoderRegisterFile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DecoderRegisterFile.v|
 !i113 1
@@ -163,13 +163,13 @@ R6
 R7
 n@decoder@register@file
 vMIPS_Processor
-R12
+Z13 !s110 1523915020
 !i10b 1
-!s100 D@MR;RU?Z<D05>XiGS>0G2
-IGO2;?b>SQW6bK[P[R20?W1
+!s100 `5@8kP0S3aY`AUaL0<Ml42
+IoE>fN_nfdXQFlADC?TQm30
 R2
 R0
-w1523833037
+w1523904867
 8C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v
 FC:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v
 L0 28
@@ -177,7 +177,7 @@ R4
 r1
 !s85 0
 31
-R14
+Z14 !s108 1523915020.000000
 !s107 C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v|
 !i113 1
@@ -185,7 +185,7 @@ R6
 R7
 n@m@i@p@s_@processor
 vMIPS_Processor_TB
-R12
+R13
 !i10b 1
 !s100 93:RClE5YGZRK?HHmQNoS0
 ILYRhFZzL:c[U2?L0SZ?8]1
@@ -207,7 +207,7 @@ R6
 R7
 n@m@i@p@s_@processor_@t@b
 vMultiplexer2to1
-Z15 !s110 1523833084
+R13
 !i10b 1
 !s100 F48Y>?kNP3VGSJ<6PZ3Z<0
 IXb]WBKb7l`O^Tb2DNA0SJ0
@@ -229,7 +229,7 @@ R6
 R7
 n@multiplexer2to1
 vMUXRegisterFile
-R15
+Z15 !s110 1523915021
 !i10b 1
 !s100 <^j`[[]Fjj[]CWW`3JSFT0
 IkIK:K2N2HH81[hn<F<Wad1
@@ -243,7 +243,7 @@ R4
 r1
 !s85 0
 31
-Z16 !s108 1523833084.000000
+Z16 !s108 1523915021.000000
 !s107 C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MUXRegisterFile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MUXRegisterFile.v|
 !i113 1
@@ -253,11 +253,11 @@ n@m@u@x@register@file
 vPC_Register
 R15
 !i10b 1
-!s100 _;b?E28JEcZ?mB]466AVZ0
-IV23MUDdV5O>13Mf>]7^Ye2
+!s100 ShPGXm<S]M_8XX@LU`8zT0
+ILd_LnV2Q;05_3P>Wz``240
 R2
 R0
-w1523830931
+w1523914787
 8C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/PC_Register.v
 FC:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/PC_Register.v
 R8
@@ -275,11 +275,11 @@ n@p@c_@register
 vProgramMemory
 R15
 !i10b 1
-!s100 _oRPc]LAgjo1j>>Egh;N<1
-I<8HUoVW6YOb9nEALBNDTZ1
+!s100 M?LbO^PlA7:cK^mE[095]0
+IRXEaJF6H>N510`:?WhdTL0
 R2
 R0
-w1523826052
+w1523893422
 8C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ProgramMemory.v
 FC:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ProgramMemory.v
 R8
@@ -295,16 +295,16 @@ R6
 R7
 n@program@memory
 vRegister
-Z17 !s110 1523833085
+R15
 !i10b 1
 !s100 egCIUc]UZ1M2z58M]>B@S3
 Ia`0d0T0]D9EP@i<bcJCQX3
 R2
 R0
-w1419780761
+w1523889308
 8C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Register.v
 FC:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Register.v
-R13
+R12
 R4
 r1
 !s85 0
@@ -317,7 +317,7 @@ R6
 R7
 n@register
 vRegisterFile
-R17
+Z17 !s110 1523915022
 !i10b 1
 !s100 iRCaBoP=AVEo`Pldi`c<00
 ICYm364jSa7_Q=9RF=F@dY3
@@ -331,7 +331,7 @@ R4
 r1
 !s85 0
 31
-Z18 !s108 1523833085.000000
+Z18 !s108 1523915022.000000
 !s107 C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/RegisterFile.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/RegisterFile.v|
 !i113 1
@@ -348,7 +348,7 @@ R0
 w1419780687
 8C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ShiftLeft2.v
 FC:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ShiftLeft2.v
-R13
+R12
 R4
 r1
 !s85 0
