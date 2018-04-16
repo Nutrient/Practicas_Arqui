@@ -291,6 +291,17 @@ DataMemory
 );
 
 Multiplexer2to1
+MUX_ForJalAndReadData_AlUResult
+(
+	.Selector(JumpJal_wire),
+	.MUX_Data0(MUX_ReadData_ALUResult_wire),
+	.MUX_Data1(PC_4_wire),
+
+	.MUX_Output(MUX_Jal_ReadData_ALUResult_wire)
+);
+
+
+Multiplexer2to1
 #(
 	.NBits(32)
 )
