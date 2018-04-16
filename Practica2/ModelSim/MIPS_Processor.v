@@ -316,7 +316,7 @@ MUX_ForRJumpAndJump
 	.MUX_Data0(MUX_ForRetJumpAndJump),
 	.MUX_Data1(ReadData1_wire),
 
-	.MUX_Output(MUX_PC_wire)
+	.MUX_Output(MUX_to_PC_wire)
 );
 
 
