@@ -79,6 +79,7 @@ wire [31:0] ShiftLeft2_SignExt_wire;
 wire [31:0] Shifted28_wire;
 wire [31:0] MUX_to_PC_wire;
 wire [31:0] MUX_to_MUX_wire;
+wire [31:0] MUX_ForRetJumpAndJump;
 integer ALUStatus;
 
 
@@ -187,7 +188,7 @@ MUX_PCJump
 	.MUX_Data0(MUX_to_MUX_wire),
 	.MUX_Data1({PC_4_wire[31:28],Shifted28_wire[27:0]}),
 
-	.MUX_Output(MUX_to_PC_wire)
+	.MUX_Output(MUX_ForRetJumpAndJump)
 );
 
 //******************************************************************/
@@ -300,6 +301,22 @@ MUX_ForALUResultAndReadData
 	.MUX_Data1(ReadData_wire),
 
 	.MUX_Output(MUX_ReadData_ALUResult_wire)
+);
+
+assign JumpR_wire = (ALUOperation_wire == 4'b1110) ? 1'b1 : 1'b0;
+
+assign JumpJal_wire = ({Instruction_wire[31:26],Jump_wire} == 7) ? 1'b1 : 1'b0;
+
+
+
+Multiplexer2to1
+MUX_ForRJumpAndJump
+(
+	.Selector(JumpR_wire),
+	.MUX_Data0(MUX_ForRetJumpAndJump),
+	.MUX_Data1(ReadData1_wire),
+
+	.MUX_Output(MUX_PC_wire)
 );
 
 
