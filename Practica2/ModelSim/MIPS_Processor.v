@@ -309,7 +309,7 @@ ArithmeticLogicUnit
 DataMemory
 #(	 
 	 .DATA_WIDTH(32),
-	 .MEMORY_DEPTH(512)
+	 .MEMORY_DEPTH(1024)
 
 )
 DataMemory

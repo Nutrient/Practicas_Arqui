@@ -20,7 +20,7 @@ main:
 	ori $a1, $t7, 0  #Start 
 	ori $a2, $t7, 64 #End 
 	ori $a3, $t7, 32 #Aux
-	addi $a0, $zero, 8 #counter
+	addi $a0, $zero, 3 #counter
 	add $s2, $zero, $a0 #sub counter
 	sll $s1, $a0, 2
 	add $a1, $a1, $s1
