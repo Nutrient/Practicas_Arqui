@@ -14,7 +14,8 @@
 module Control
 (
 	input [5:0]OP,
-	
+	//agregamos los outputs faltantes para poder ejecutar las señales correspondientes del comportamiento de la
+	//instruccion
 	output RegDst,
 	output BranchEQ_NE,
 	output Jump,
@@ -25,6 +26,7 @@ module Control
 	output RegWrite,
 	output [2:0]ALUOp
 );
+//se agregan las instrucciones que agregaremos del MIPS
 localparam R_Type = 0;
 localparam I_Type_ADDI = 6'h8;
 localparam I_Type_ORI = 6'h0d;
@@ -38,6 +40,7 @@ localparam J_Type_JAL = 6'h3;
 
 reg [10:0] ControlValues;
 
+//les asignamos un valor correspondiente a las señales que deben estar encendidas para su ejecucion
 always@(OP) begin
 	casex(OP)
 		R_Type:       ControlValues= 11'b1_001_00_00_111;

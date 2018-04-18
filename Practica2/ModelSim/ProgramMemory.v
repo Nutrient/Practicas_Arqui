@@ -23,7 +23,7 @@ module ProgramMemory
 	output reg [(DATA_WIDTH-1):0] Instruction
 );
 wire [(DATA_WIDTH-1):0] RealAddress;
-
+//movemos nuestros bits para que coincidan con nuestras verdaderas localidades de memoria
 assign RealAddress = {2'b0,Address[(DATA_WIDTH-24):2]};
 
 	// Declare the ROM variable

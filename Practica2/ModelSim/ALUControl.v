@@ -19,7 +19,7 @@ module ALUControl
 	output [3:0] ALUOperation
 
 );
-
+//se agregan todas las operacion que nuestro procesador sera capaz de ejecutar
 localparam R_Type_AND    = 9'b111_100100;
 localparam R_Type_OR     = 9'b111_100101;
 localparam R_Type_NOR    = 9'b111_100111;
@@ -42,6 +42,7 @@ wire [8:0] Selector;
 
 assign Selector = {ALUOp, ALUFunction};
 
+//se le agregan las instrucciones con un valor que debe coincidir con los valores en la ALU
 always@(Selector)begin
 	casex(Selector)
 		R_Type_AND:    ALUControlValues = 4'b0000;

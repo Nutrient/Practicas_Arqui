@@ -27,7 +27,7 @@
 
 module MIPS_Processor
 #(
-	parameter MEMORY_DEPTH = 64
+	parameter MEMORY_DEPTH = 64 //cambiamos el tamaño del programa para que pueda caber
 
 )
 
@@ -88,13 +88,13 @@ wire [31:0] MUX_ForRetJumpAndJump;
 wire [31:0] MUX_Jal_ReadData_ALUResult_wire;
 integer ALUStatus;
 
-
+//Se agregan los wires necesarios
 //******************************************************************/
 //******************************************************************/
 //******************************************************************/
 //******************************************************************/
 //******************************************************************/
-Control
+Control // de control agregamos las señales faltantes como jump, memwrite, etc
 ControlUnit
 (
 	.OP(Instruction_wire[31:26]),
@@ -141,7 +141,7 @@ PC_Puls_4
 	.Result(PC_4_wire)
 );
 
-ShiftLeft2
+ShiftLeft2 
 Left2
 (
 	.DataInput(InmmediateExtend_wire),
@@ -149,7 +149,7 @@ Left2
 	.DataOutput(ShiftLeft2_SignExt_wire)
 );
 
-ShiftLeft2
+ShiftLeft2 //concatenamos la direccion de salto
 ShiftLeft28
 (
 	.DataInput({6'b00000,Instruction_wire[25:0]}),
@@ -170,7 +170,7 @@ PC_Adder_Shift2
 
 );
 
-Multiplexer2to1
+Multiplexer2to1 //seleccionamos cual sera la siguiente instruccion 
 #(
 	.NBits(32)
 )
@@ -184,7 +184,7 @@ PCShift_OR_PC
 );
 
 
-Multiplexer2to1
+Multiplexer2to1 //seleccionamos entre pc o jump
 #(
 	.NBits(32)
 )
@@ -202,7 +202,7 @@ MUX_PCJump
 //******************************************************************/
 //******************************************************************/
 //******************************************************************/
-Multiplexer2to1
+Multiplexer2to1 //seleccionamos en que registro debemos escribir
 #(
 	.NBits(5)
 )
@@ -216,7 +216,7 @@ MUX_ForRTypeAndIType
 
 );
 
-Multiplexer2to1
+Multiplexer2to1 //vemos si vamos a hacer jal o ejecutaremos la siguiente instruccion
 #(
 	.NBits(32)
 )
@@ -229,7 +229,7 @@ MUX_ForJalAndReadData_AlUResult
 	.MUX_Output(MUX_Jal_ReadData_ALUResult_wire)
 );
 
-Multiplexer2to1
+Multiplexer2to1 //seleccionamos el registro en el que escribiremos
 #(
 	.NBits(5)
 )
@@ -268,7 +268,7 @@ SignExtendForConstants
 
 
 
-Multiplexer2to1
+Multiplexer2to1 //seleccionamos si vamos a leer de los registros o el valor de inmediato
 #(
 	.NBits(32)
 )
@@ -307,7 +307,7 @@ ArithmeticLogicUnit
 
 //Added
 
-DataMemory
+DataMemory //nuestra RAM
 #(	 
 	 .DATA_WIDTH(32),
 	 .MEMORY_DEPTH(1024)
@@ -334,7 +334,7 @@ Multiplexer2to1
 #(
 	.NBits(32)
 )
-MUX_ForALUResultAndReadData
+MUX_ForALUResultAndReadData //seleccionamos que resultado debemos enviar para escribir
 (
 	.Selector(MemtoReg_wire),
 	.MUX_Data0(ALUResult_wire),
@@ -343,14 +343,14 @@ MUX_ForALUResultAndReadData
 	.MUX_Output(MUX_ReadData_ALUResult_wire)
 );
 
-assign JumpR_wire = (ALUOperation_wire == 4'b1110) ? 1'b1 : 1'b0;
+assign JumpR_wire = (ALUOperation_wire == 4'b1110) ? 1'b1 : 1'b0; //vamos a ver si la instruccion fue JR
 
-assign JumpJal_wire = ({Instruction_wire[31:26],Jump_wire} == 7) ? 1'b1 : 1'b0;
+assign JumpJal_wire = ({Instruction_wire[31:26],Jump_wire} == 7) ? 1'b1 : 1'b0; // o vemos si es Jal
 
 
 
 Multiplexer2to1
-MUX_ForRJumpAndJump
+MUX_ForRJumpAndJump //seleccionamos a siguente instruccion del PC/jump
 (
 	.Selector(JumpR_wire),
 	.MUX_Data0(MUX_ForRetJumpAndJump),
