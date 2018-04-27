@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_Processor
-Tue Apr 17 07:30:52 2018
+Thu Apr 26 22:18:45 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -24,56 +24,64 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  16. Parameter Settings for User Entity Instance: Adder32bits:PC_Adder_Shift2
  17. Parameter Settings for User Entity Instance: Multiplexer2to1:PCShift_OR_PC
  18. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_PCJump
- 19. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForRTypeAndIType
- 20. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForJalAndReadData_AlUResult
- 21. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_WriteRegister_Ra
- 22. Parameter Settings for User Entity Instance: RegisterFile:Register_File
- 23. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_Zero
- 24. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_at
- 25. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v0
- 26. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v1
- 27. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a0
- 28. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a1
- 29. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a2
- 30. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a3
- 31. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t0
- 32. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t1
- 33. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t2
- 34. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t3
- 35. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t4
- 36. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t5
- 37. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t6
- 38. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t7
- 39. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s0
- 40. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s1
- 41. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s2
- 42. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s3
- 43. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s4
- 44. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s5
- 45. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s6
- 46. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s7
- 47. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t8
- 48. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t9
- 49. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k0
- 50. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k1
- 51. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_gp
- 52. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_sp
- 53. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_fp
- 54. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_ra
- 55. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister1
- 56. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister2
- 57. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForReadDataAndInmediate
- 58. Parameter Settings for User Entity Instance: DataMemory:DataMemory
- 59. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForALUResultAndReadData
- 60. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForRJumpAndJump
- 61. Port Connectivity Checks: "DataMemory:DataMemory"
- 62. Port Connectivity Checks: "RegisterFile:Register_File|Register:Register_Zero"
- 63. Port Connectivity Checks: "Multiplexer2to1:MUX_WriteRegister_Ra"
- 64. Port Connectivity Checks: "ShiftLeft2:ShiftLeft28"
- 65. Port Connectivity Checks: "Adder32bits:PC_Puls_4"
- 66. Post-Synthesis Netlist Statistics for Top Partition
- 67. Elapsed Time Per Partition
- 68. Analysis & Synthesis Messages
+ 19. Parameter Settings for User Entity Instance: PipeRegister:PipeRegister_IF_ID
+ 20. Parameter Settings for User Entity Instance: PipeRegister:PipeRegister_ID_EX
+ 21. Parameter Settings for User Entity Instance: PipeRegister:PipeRegister_EX_MEM
+ 22. Parameter Settings for User Entity Instance: PipeRegister:PipeRegister_MEM_WB
+ 23. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForRTypeAndIType
+ 24. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForJalAndReadData_AlUResult
+ 25. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_WriteRegister_Ra
+ 26. Parameter Settings for User Entity Instance: RegisterFile:Register_File
+ 27. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_Zero
+ 28. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_at
+ 29. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v0
+ 30. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_v1
+ 31. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a0
+ 32. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a1
+ 33. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a2
+ 34. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_a3
+ 35. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t0
+ 36. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t1
+ 37. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t2
+ 38. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t3
+ 39. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t4
+ 40. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t5
+ 41. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t6
+ 42. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t7
+ 43. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s0
+ 44. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s1
+ 45. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s2
+ 46. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s3
+ 47. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s4
+ 48. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s5
+ 49. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s6
+ 50. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_s7
+ 51. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t8
+ 52. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_t9
+ 53. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k0
+ 54. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_k1
+ 55. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_gp
+ 56. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_sp
+ 57. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_fp
+ 58. Parameter Settings for User Entity Instance: RegisterFile:Register_File|Register:Register_ra
+ 59. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister1
+ 60. Parameter Settings for User Entity Instance: RegisterFile:Register_File|MUXRegisterFile:MUXRegister2
+ 61. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForReadDataAndInmediate
+ 62. Parameter Settings for User Entity Instance: DataMemory:DataMemory
+ 63. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForALUResultAndReadData
+ 64. Parameter Settings for User Entity Instance: Multiplexer2to1:MUX_ForRJumpAndJump
+ 65. Port Connectivity Checks: "DataMemory:DataMemory"
+ 66. Port Connectivity Checks: "RegisterFile:Register_File|Register:Register_Zero"
+ 67. Port Connectivity Checks: "Multiplexer2to1:MUX_WriteRegister_Ra"
+ 68. Port Connectivity Checks: "PipeRegister:PipeRegister_MEM_WB"
+ 69. Port Connectivity Checks: "PipeRegister:PipeRegister_EX_MEM"
+ 70. Port Connectivity Checks: "PipeRegister:PipeRegister_ID_EX"
+ 71. Port Connectivity Checks: "PipeRegister:PipeRegister_IF_ID"
+ 72. Port Connectivity Checks: "ShiftLeft2:ShiftLeft28"
+ 73. Port Connectivity Checks: "Adder32bits:PC_Puls_4"
+ 74. Post-Synthesis Netlist Statistics for Top Partition
+ 75. Elapsed Time Per Partition
+ 76. Analysis & Synthesis Messages
 
 
 
@@ -99,13 +107,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 17 07:30:51 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 26 22:18:44 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; MIPS_Processor                              ;
 ; Top-level Entity Name              ; MIPS_Processor                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 58,919                                      ;
-;     Total combinational functions  ; 25,233                                      ;
+; Total logic elements               ; 58,914                                      ;
+;     Total combinational functions  ; 25,228                                      ;
 ;     Dedicated logic registers      ; 33,792                                      ;
 ; Total registers                    ; 33792                                       ;
 ; Total pins                         ; 74                                          ;
@@ -207,40 +215,43 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processor 3            ;   0.4%      ;
+;     Processor 4            ;   0.4%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                              ;
-+---------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                    ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
-+---------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; SignExtend.v                                                        ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/SignExtend.v          ;         ;
-; ShiftLeft2.v                                                        ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ShiftLeft2.v          ;         ;
-; RegisterFile.v                                                      ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/RegisterFile.v        ;         ;
-; Register.v                                                          ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Register.v            ;         ;
-; ProgramMemory.v                                                     ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ProgramMemory.v       ;         ;
-; PC_Register.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/PC_Register.v         ;         ;
-; MUXRegisterFile.v                                                   ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MUXRegisterFile.v     ;         ;
-; Multiplexer2to1.v                                                   ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Multiplexer2to1.v     ;         ;
-; MIPS_Processor.v                                                    ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v      ;         ;
-; DecoderRegisterFile.v                                               ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DecoderRegisterFile.v ;         ;
-; DataMemory.v                                                        ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DataMemory.v          ;         ;
-; Control.v                                                           ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Control.v             ;         ;
-; ALUControl.v                                                        ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ALUControl.v          ;         ;
-; ALU.v                                                               ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ALU.v                 ;         ;
-; Adder32bits.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Adder32bits.v         ;         ;
-; /users/nutrient/desktop/practicas_arqui/practica2/res/practica1.dat ; yes             ; Auto-Found Unspecified File  ; /users/nutrient/desktop/practicas_arqui/practica2/res/practica1.dat                ;         ;
-+---------------------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
++--------------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
++--------------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; SignExtend.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/SignExtend.v          ;         ;
+; ShiftLeft2.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ShiftLeft2.v          ;         ;
+; RegisterFile.v                                                     ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/RegisterFile.v        ;         ;
+; Register.v                                                         ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/Register.v            ;         ;
+; ProgramMemory.v                                                    ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ProgramMemory.v       ;         ;
+; PC_Register.v                                                      ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/PC_Register.v         ;         ;
+; MUXRegisterFile.v                                                  ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MUXRegisterFile.v     ;         ;
+; Multiplexer2to1.v                                                  ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/Multiplexer2to1.v     ;         ;
+; MIPS_Processor.v                                                   ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v      ;         ;
+; DecoderRegisterFile.v                                              ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/DecoderRegisterFile.v ;         ;
+; DataMemory.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/DataMemory.v          ;         ;
+; Control.v                                                          ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/Control.v             ;         ;
+; ALUControl.v                                                       ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ALUControl.v          ;         ;
+; ALU.v                                                              ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ALU.v                 ;         ;
+; Adder32bits.v                                                      ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/Adder32bits.v         ;         ;
+; PipeRegister.v                                                     ; yes             ; User Verilog HDL File        ; C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/PipeRegister.v        ;         ;
+; /users/carso/documents/practicas_arqui/practica2/res/practica1.dat ; yes             ; Auto-Found Unspecified File  ; /users/carso/documents/practicas_arqui/practica2/res/practica1.dat                ;         ;
++--------------------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -248,16 +259,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 58,919    ;
+; Estimated Total logic elements              ; 58,914    ;
 ;                                             ;           ;
-; Total combinational functions               ; 25233     ;
+; Total combinational functions               ; 25228     ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 24909     ;
-;     -- 3 input functions                    ; 227       ;
-;     -- <=2 input functions                  ; 97        ;
+;     -- 4 input functions                    ; 23862     ;
+;     -- 3 input functions                    ; 1274      ;
+;     -- <=2 input functions                  ; 92        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 25143     ;
+;     -- normal mode                          ; 25138     ;
 ;     -- arithmetic mode                      ; 90        ;
 ;                                             ;           ;
 ; Total registers                             ; 33792     ;
@@ -270,8 +281,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 33792     ;
-; Total fan-out                               ; 202984    ;
-; Average fan-out                             ; 3.43      ;
+; Total fan-out                               ; 201927    ;
+; Average fan-out                             ; 3.41      ;
 +---------------------------------------------+-----------+
 
 
@@ -280,23 +291,23 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Entity Name         ; Library Name ;
 +------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+---------------------+--------------+
-; |MIPS_Processor                                      ; 25233 (24)          ; 33792 (0)                 ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |MIPS_Processor                                                         ; MIPS_Processor      ; work         ;
-;    |ALU:ArithmeticLogicUnit|                         ; 574 (574)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALU:ArithmeticLogicUnit                                 ; ALU                 ; work         ;
-;    |ALUControl:ArithmeticLogicUnitControl|           ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALUControl:ArithmeticLogicUnitControl                   ; ALUControl          ; work         ;
+; |MIPS_Processor                                      ; 25228 (18)          ; 33792 (0)                 ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |MIPS_Processor                                                         ; MIPS_Processor      ; work         ;
+;    |ALU:ArithmeticLogicUnit|                         ; 575 (575)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALU:ArithmeticLogicUnit                                 ; ALU                 ; work         ;
+;    |ALUControl:ArithmeticLogicUnitControl|           ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ALUControl:ArithmeticLogicUnitControl                   ; ALUControl          ; work         ;
 ;    |Adder32bits:PC_Adder_Shift2|                     ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Adder32bits:PC_Adder_Shift2                             ; Adder32bits         ; work         ;
 ;    |Adder32bits:PC_Puls_4|                           ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Adder32bits:PC_Puls_4                                   ; Adder32bits         ; work         ;
 ;    |Control:ControlUnit|                             ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Control:ControlUnit                                     ; Control             ; work         ;
-;    |DataMemory:DataMemory|                           ; 22868 (22868)       ; 32768 (32768)             ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|DataMemory:DataMemory                                   ; DataMemory          ; work         ;
-;    |Multiplexer2to1:MUX_ForJalAndReadData_AlUResult| ; 86 (86)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_ForJalAndReadData_AlUResult         ; Multiplexer2to1     ; work         ;
-;    |Multiplexer2to1:MUX_ForRJumpAndJump|             ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_ForRJumpAndJump                     ; Multiplexer2to1     ; work         ;
-;    |Multiplexer2to1:MUX_ForReadDataAndInmediate|     ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_ForReadDataAndInmediate             ; Multiplexer2to1     ; work         ;
+;    |DataMemory:DataMemory|                           ; 22857 (22857)       ; 32768 (32768)             ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|DataMemory:DataMemory                                   ; DataMemory          ; work         ;
+;    |Multiplexer2to1:MUX_ForJalAndReadData_AlUResult| ; 99 (99)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_ForJalAndReadData_AlUResult         ; Multiplexer2to1     ; work         ;
+;    |Multiplexer2to1:MUX_ForRJumpAndJump|             ; 55 (55)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_ForRJumpAndJump                     ; Multiplexer2to1     ; work         ;
+;    |Multiplexer2to1:MUX_ForReadDataAndInmediate|     ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_ForReadDataAndInmediate             ; Multiplexer2to1     ; work         ;
 ;    |Multiplexer2to1:MUX_WriteRegister_Ra|            ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|Multiplexer2to1:MUX_WriteRegister_Ra                    ; Multiplexer2to1     ; work         ;
 ;    |PC_Register:ProgramCounter|                      ; 7 (7)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|PC_Register:ProgramCounter                              ; PC_Register         ; work         ;
-;    |ProgramMemory:ROMProgramMemory|                  ; 132 (132)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ProgramMemory:ROMProgramMemory                          ; ProgramMemory       ; work         ;
-;    |RegisterFile:Register_File|                      ; 1364 (0)            ; 992 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File                              ; RegisterFile        ; work         ;
+;    |ProgramMemory:ROMProgramMemory|                  ; 136 (136)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|ProgramMemory:ROMProgramMemory                          ; ProgramMemory       ; work         ;
+;    |RegisterFile:Register_File|                      ; 1359 (0)            ; 992 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File                              ; RegisterFile        ; work         ;
 ;       |DecoderRegisterFile:Decoder|                  ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|DecoderRegisterFile:Decoder  ; DecoderRegisterFile ; work         ;
-;       |MUXRegisterFile:MUXRegister1|                 ; 658 (658)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1 ; MUXRegisterFile     ; work         ;
-;       |MUXRegisterFile:MUXRegister2|                 ; 652 (652)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2 ; MUXRegisterFile     ; work         ;
+;       |MUXRegisterFile:MUXRegister1|                 ; 649 (649)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister1 ; MUXRegisterFile     ; work         ;
+;       |MUXRegisterFile:MUXRegister2|                 ; 656 (656)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|MUXRegisterFile:MUXRegister2 ; MUXRegisterFile     ; work         ;
 ;       |Register:Register_a0|                         ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a0         ; Register            ; work         ;
 ;       |Register:Register_a1|                         ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a1         ; Register            ; work         ;
 ;       |Register:Register_a2|                         ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS_Processor|RegisterFile:Register_File|Register:Register_a2         ; Register            ; work         ;
@@ -465,6 +476,50 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------------------+
 ; NBits          ; 32    ; Signed Integer                                 ;
 +----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PipeRegister:PipeRegister_IF_ID ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 64    ; Signed Integer                                      ;
+; START          ; 0     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PipeRegister:PipeRegister_ID_EX ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 149   ; Signed Integer                                      ;
+; START          ; 0     ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PipeRegister:PipeRegister_EX_MEM ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                       ;
+; START          ; 0     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PipeRegister:PipeRegister_MEM_WB ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                       ;
+; START          ; 0     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -948,6 +1003,49 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+-----------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PipeRegister:PipeRegister_MEM_WB"                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PipeRegister:PipeRegister_EX_MEM"                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PipeRegister:PipeRegister_ID_EX"                                                                                                                                                         ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                                            ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; DataInput  ; Input  ; Warning  ; Input port expression (147 bits) is smaller than the input port (149 bits) it drives.  Extra input bit(s) "DataInput[148..147]" will be connected to GND.                          ;
+; DataOutput ; Output ; Warning  ; Output or bidir port (149 bits) is wider than the port expression (64 bits) it drives; bit(s) "DataOutput[148..64]" have no fanouts                                                ;
++------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PipeRegister:PipeRegister_IF_ID"                                                                                                                                                                ;
++-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; enable            ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; enable[-1]        ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; DataOutput[31..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
++-------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ShiftLeft2:ShiftLeft28"                                                                           ;
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -980,19 +1078,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR SLD           ; 4                           ;
 ;     ENA               ; 32768                       ;
 ;     ENA CLR           ; 994                         ;
-; cycloneiii_lcell_comb ; 25234                       ;
+; cycloneiii_lcell_comb ; 25229                       ;
 ;     arith             ; 90                          ;
 ;         2 data inputs ; 29                          ;
 ;         3 data inputs ; 61                          ;
-;     normal            ; 25144                       ;
+;     normal            ; 25139                       ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 11                          ;
-;         2 data inputs ; 57                          ;
-;         3 data inputs ; 166                         ;
-;         4 data inputs ; 24909                       ;
+;         2 data inputs ; 52                          ;
+;         3 data inputs ; 1213                        ;
+;         4 data inputs ; 23862                       ;
 ;                       ;                             ;
 ; Max LUT depth         ; 29.00                       ;
-; Average LUT depth     ; 16.72                       ;
+; Average LUT depth     ; 16.29                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1001,7 +1099,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:03:14     ;
+; Top            ; 00:03:27     ;
 +----------------+--------------+
 
 
@@ -1011,126 +1109,131 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 17 07:27:13 2018
+    Info: Processing started: Thu Apr 26 22:14:57 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_Processor -c MIPS_Processor
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file signextend.v
-    Info (12023): Found entity 1: SignExtend File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/SignExtend.v Line: 14
+    Info (12023): Found entity 1: SignExtend File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/SignExtend.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file shiftleft2.v
-    Info (12023): Found entity 1: ShiftLeft2 File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ShiftLeft2.v Line: 12
+    Info (12023): Found entity 1: ShiftLeft2 File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ShiftLeft2.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file registerfile.v
-    Info (12023): Found entity 1: RegisterFile File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/RegisterFile.v Line: 15
+    Info (12023): Found entity 1: RegisterFile File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/RegisterFile.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: Register File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Register.v Line: 12
+    Info (12023): Found entity 1: Register File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/Register.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file programmemory.v
-    Info (12023): Found entity 1: ProgramMemory File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ProgramMemory.v Line: 15
+    Info (12023): Found entity 1: ProgramMemory File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ProgramMemory.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file pc_register.v
-    Info (12023): Found entity 1: PC_Register File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/PC_Register.v Line: 15
+    Info (12023): Found entity 1: PC_Register File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/PC_Register.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file muxregisterfile.v
-    Info (12023): Found entity 1: MUXRegisterFile File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MUXRegisterFile.v Line: 2
+    Info (12023): Found entity 1: MUXRegisterFile File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MUXRegisterFile.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file multiplexer2to1.v
-    Info (12023): Found entity 1: Multiplexer2to1 File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Multiplexer2to1.v Line: 13
+    Info (12023): Found entity 1: Multiplexer2to1 File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/Multiplexer2to1.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file mips_processor_tb.v
-    Info (12023): Found entity 1: MIPS_Processor_TB File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor_TB.v Line: 15
+    Info (12023): Found entity 1: MIPS_Processor_TB File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor_TB.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file mips_processor.v
-    Info (12023): Found entity 1: MIPS_Processor File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 28
+    Info (12023): Found entity 1: MIPS_Processor File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 28
 Info (12021): Found 0 design units, including 0 entities, in source file definitions.v
 Info (12021): Found 1 design units, including 1 entities, in source file decoderregisterfile.v
-    Info (12023): Found entity 1: DecoderRegisterFile File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DecoderRegisterFile.v Line: 12
+    Info (12023): Found entity 1: DecoderRegisterFile File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/DecoderRegisterFile.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file datamemory.v
-    Info (12023): Found entity 1: DataMemory File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DataMemory.v Line: 13
+    Info (12023): Found entity 1: DataMemory File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/DataMemory.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file control.v
-    Info (12023): Found entity 1: Control File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Control.v Line: 14
+    Info (12023): Found entity 1: Control File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/Control.v Line: 14
 Info (12021): Found 1 design units, including 1 entities, in source file andgate.v
-    Info (12023): Found entity 1: ANDGate File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ANDGate.v Line: 13
+    Info (12023): Found entity 1: ANDGate File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ANDGate.v Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file alucontrol.v
-    Info (12023): Found entity 1: ALUControl File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ALUControl.v Line: 15
+    Info (12023): Found entity 1: ALUControl File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ALUControl.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: ALU File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ALU.v Line: 20
+    Info (12023): Found entity 1: ALU File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ALU.v Line: 20
 Info (12021): Found 1 design units, including 1 entities, in source file adder32bits.v
-    Info (12023): Found entity 1: Adder32bits File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Adder32bits.v Line: 13
+    Info (12023): Found entity 1: Adder32bits File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/Adder32bits.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file piperegister.v
+    Info (12023): Found entity 1: PipeRegister File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/PipeRegister.v Line: 12
 Info (12127): Elaborating entity "MIPS_Processor" for the top level hierarchy
-Info (12128): Elaborating entity "Control" for hierarchy "Control:ControlUnit" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 110
-Info (12128): Elaborating entity "PC_Register" for hierarchy "PC_Register:ProgramCounter" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 120
-Info (12128): Elaborating entity "ProgramMemory" for hierarchy "ProgramMemory:ROMProgramMemory" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 133
-Warning (10850): Verilog HDL warning at ProgramMemory.v(34): number of words (50) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ProgramMemory.v Line: 34
-Warning (10030): Net "rom.data_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ProgramMemory.v Line: 30
-Warning (10030): Net "rom.waddr_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ProgramMemory.v Line: 30
-Warning (10030): Net "rom.we_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/ProgramMemory.v Line: 30
-Info (12128): Elaborating entity "Adder32bits" for hierarchy "Adder32bits:PC_Puls_4" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 142
-Info (12128): Elaborating entity "ShiftLeft2" for hierarchy "ShiftLeft2:Left2" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 150
-Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:PCShift_OR_PC" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 184
-Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:MUX_ForRTypeAndIType" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 217
-Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:Register_File" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 260
-Info (12128): Elaborating entity "DecoderRegisterFile" for hierarchy "RegisterFile:Register_File|DecoderRegisterFile:Decoder" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/RegisterFile.v Line: 42
-Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:Register_File|Register:Register_Zero" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/RegisterFile.v Line: 58
-Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:Register_File|Register:Register_sp" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/RegisterFile.v Line: 411
-Info (12128): Elaborating entity "MUXRegisterFile" for hierarchy "RegisterFile:Register_File|MUXRegisterFile:MUXRegister1" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/RegisterFile.v Line: 483
-Info (12128): Elaborating entity "SignExtend" for hierarchy "SignExtend:SignExtendForConstants" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 267
-Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:ArithmeticLogicUnitControl" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 293
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ArithmeticLogicUnit" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 306
-Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:DataMemory" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 328
-Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:MUX_ForRJumpAndJump" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 360
+Info (12128): Elaborating entity "Control" for hierarchy "Control:ControlUnit" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 126
+Info (12128): Elaborating entity "PC_Register" for hierarchy "PC_Register:ProgramCounter" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 136
+Info (12128): Elaborating entity "ProgramMemory" for hierarchy "ProgramMemory:ROMProgramMemory" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 149
+Warning (10850): Verilog HDL warning at ProgramMemory.v(34): number of words (50) in memory file does not match the number of elements in the address range [0:63] File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ProgramMemory.v Line: 34
+Warning (10030): Net "rom.data_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ProgramMemory.v Line: 30
+Warning (10030): Net "rom.waddr_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ProgramMemory.v Line: 30
+Warning (10030): Net "rom.we_a" at ProgramMemory.v(30) has no driver or initial value, using a default initial value '0' File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/ProgramMemory.v Line: 30
+Info (12128): Elaborating entity "Adder32bits" for hierarchy "Adder32bits:PC_Puls_4" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 158
+Info (12128): Elaborating entity "ShiftLeft2" for hierarchy "ShiftLeft2:Left2" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 166
+Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:PCShift_OR_PC" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 200
+Info (12128): Elaborating entity "PipeRegister" for hierarchy "PipeRegister:PipeRegister_IF_ID" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 230
+Info (12128): Elaborating entity "PipeRegister" for hierarchy "PipeRegister:PipeRegister_ID_EX" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 261
+Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:MUX_ForRTypeAndIType" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 315
+Info (12128): Elaborating entity "RegisterFile" for hierarchy "RegisterFile:Register_File" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 358
+Info (12128): Elaborating entity "DecoderRegisterFile" for hierarchy "RegisterFile:Register_File|DecoderRegisterFile:Decoder" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/RegisterFile.v Line: 42
+Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:Register_File|Register:Register_Zero" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/RegisterFile.v Line: 58
+Info (12128): Elaborating entity "Register" for hierarchy "RegisterFile:Register_File|Register:Register_sp" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/RegisterFile.v Line: 411
+Info (12128): Elaborating entity "MUXRegisterFile" for hierarchy "RegisterFile:Register_File|MUXRegisterFile:MUXRegister1" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/RegisterFile.v Line: 483
+Info (12128): Elaborating entity "SignExtend" for hierarchy "SignExtend:SignExtendForConstants" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 365
+Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:ArithmeticLogicUnitControl" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 391
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ArithmeticLogicUnit" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 404
+Info (12128): Elaborating entity "DataMemory" for hierarchy "DataMemory:DataMemory" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 426
+Info (12128): Elaborating entity "Multiplexer2to1" for hierarchy "Multiplexer2to1:MUX_ForRJumpAndJump" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 458
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "DataMemory:DataMemory|ram" is uninferred due to asynchronous read logic File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DataMemory.v Line: 26
-    Info (276007): RAM logic "RegisterFile:Register_File|DecoderRegisterFile:Decoder|Ram0" is uninferred due to asynchronous read logic File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/DecoderRegisterFile.v Line: 20
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/db/MIPS_Processor.ram0_ProgramMemory_93ae0f9.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Info (13000): Registers with preset signals will power-up high File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/Register.v Line: 31
+    Info (276007): RAM logic "DataMemory:DataMemory|ram" is uninferred due to asynchronous read logic File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/DataMemory.v Line: 26
+    Info (276007): RAM logic "RegisterFile:Register_File|DecoderRegisterFile:Decoder|Ram0" is uninferred due to asynchronous read logic File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/DecoderRegisterFile.v Line: 20
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/db/MIPS_Processor.ram0_ProgramMemory_93ae0f9.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/Register.v Line: 31
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "PortOut[0]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[1]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[2]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[3]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[4]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[5]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[6]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[7]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[8]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[9]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[10]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[11]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[12]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[13]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[14]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[15]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[16]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[17]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[18]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[19]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[20]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[21]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[22]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[23]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[24]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[25]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[26]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[27]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[28]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[29]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[30]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
-    Warning (13410): Pin "PortOut[31]" is stuck at GND File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[0]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[1]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[2]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[3]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[4]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[5]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[6]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[7]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[8]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[9]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[10]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[11]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[12]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[13]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[14]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[15]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[16]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[17]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[18]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[19]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[20]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[21]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[22]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[23]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[24]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[25]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[26]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[27]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[28]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[29]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[30]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
+    Warning (13410): Pin "PortOut[31]" is stuck at GND File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 42
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "PortIn[0]" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 38
-    Warning (15610): No output dependent on input pin "PortIn[1]" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 38
-    Warning (15610): No output dependent on input pin "PortIn[2]" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 38
-    Warning (15610): No output dependent on input pin "PortIn[3]" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 38
-    Warning (15610): No output dependent on input pin "PortIn[4]" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 38
-    Warning (15610): No output dependent on input pin "PortIn[5]" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 38
-    Warning (15610): No output dependent on input pin "PortIn[6]" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 38
-    Warning (15610): No output dependent on input pin "PortIn[7]" File: C:/Users/nutrient/Desktop/Practicas_Arqui/Practica2/ModelSim/MIPS_Processor.v Line: 38
-Info (21057): Implemented 59057 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "PortIn[0]" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 38
+    Warning (15610): No output dependent on input pin "PortIn[1]" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 38
+    Warning (15610): No output dependent on input pin "PortIn[2]" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 38
+    Warning (15610): No output dependent on input pin "PortIn[3]" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 38
+    Warning (15610): No output dependent on input pin "PortIn[4]" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 38
+    Warning (15610): No output dependent on input pin "PortIn[5]" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 38
+    Warning (15610): No output dependent on input pin "PortIn[6]" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 38
+    Warning (15610): No output dependent on input pin "PortIn[7]" File: C:/Users/Carso/Documents/Practicas_Arqui/Practica3/ModelSim/MIPS_Processor.v Line: 38
+Info (21057): Implemented 59052 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 58983 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 48 warnings
-    Info: Peak virtual memory: 917 megabytes
-    Info: Processing ended: Tue Apr 17 07:30:52 2018
-    Info: Elapsed time: 00:03:39
-    Info: Total CPU time (on all processors): 00:04:02
+    Info (21061): Implemented 58978 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 49 warnings
+    Info: Peak virtual memory: 965 megabytes
+    Info: Processing ended: Thu Apr 26 22:18:45 2018
+    Info: Elapsed time: 00:03:48
+    Info: Total CPU time (on all processors): 00:04:06
 
 

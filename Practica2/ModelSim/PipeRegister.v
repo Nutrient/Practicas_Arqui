@@ -24,7 +24,7 @@ module Register
 	output reg [N-1:0] DataOutput
 );
 
-always@(negedge reset or negedge clk) begin
+always@(negedge reset or posedge clk) begin
 	if(reset==0)
 		DataOutput <= START;
 	else	

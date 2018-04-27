@@ -88,6 +88,30 @@ wire [31:0] MUX_ForRetJumpAndJump;
 wire [31:0] MUX_Jal_ReadData_ALUResult_wire;
 integer ALUStatus;
 
+
+//PipeRegister added
+
+wire [31:0] ID_PC_4_wire;
+wire [31:0] ID_Intruction_wire;
+
+//PipeRegister ID_EX 
+wire [31:0] ID_EX_ReadData1_wire;
+wire [31:0] ID_EX_ReadData2_wire;
+wire [31:0] ID_EX_InmmediateExtend_wire;
+wire [31:0] ID_EX_ID_PC_4_wire;
+wire [4:0]  ID_EX_Instruction_20_16_wire;
+wire [4:0]  ID_EX_Instruction_15_11_wire;
+wire ID_EX_RegWrite_wire;
+wire ID_EX_MemWrite_wire;
+wire ID_EX_MemtoReg_wire;
+wire ID_EX_BranchEQ_NE_wire;
+wire ID_EX_RegDst_wire;
+wire ID_EX_ALUOp_wire;
+wire ID_EX_ALUSrc_wire;
+
+
+
+
 //Se agregan los wires necesarios
 //******************************************************************/
 //******************************************************************/
@@ -197,12 +221,108 @@ MUX_PCJump
 	.MUX_Output(MUX_ForRetJumpAndJump)
 );
 
+PipeRegister
+#(
+	.N(64)
+)
+PipeRegister_IF_ID
+(
+
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.DataInput({PC_4_wire[31:0],Instruction_wire[31:0]}),
+
+	.DataOutput({ID_PC_4_wire[31:0],ID_Intruction_wire[31:0]})
+
+);
+
+PipeRegister
+#(
+// 32 * 4 + 10 (2 Instructions) + 8 (1 bit control) + 3 (output ALUOP)
+	.N(149)
+)
+PipeRegister_ID_EX
+(
+
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.DataInput({RegWrite_wire,
+					MemWrite_wire,
+					MemtoReg_wire,
+					BranchEQ_NE_wire,
+					RegDst_wire,
+					ALUOp_wire,
+					ALUSrc_wire,
+					ID_PC_4_wire[31:0],
+					ReadData1_wire[31:0],
+					ReadData2_wire[31:0],
+					InmmediateExtend_wire[31:0],
+					Instruction_wire[20:16],
+					Instruction_wire[15:11],					
+	
+	}),
+
+	.DataOutput({ID_EX_RegWrite_wire,
+					ID_EX_MemWrite_wire,
+					ID_EX_MemtoReg_wire,
+					ID_EX_BranchEQ_NE_wire,
+					ID_EX_RegDst_wire,
+					ID_EX_ALUOp_wire,
+					ID_EX_ALUSrc_wire,
+					ID_EX_ID_PC_4_wire[31:0],
+					ID_EX_ReadData1_wire[31:0],
+					ID_EX_ReadData2_wire[31:0],
+					ID_EX_InmmediateExtend_wire[31:0],
+					ID_EX_Instruction_20_16_wire[4:0],
+					ID_EX_Instruction_15_11_wire[4:0],
+	
+	})
+
+);
+
+PipeRegister
+#(
+//5 + 32 + 32 + 32 + 
+	.N(64)
+)
+PipeRegister_EX_MEM
+(
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.DataInput({PC_4_wire[31:0],Instruction_wire[31:0]}),
+
+
+	.DataOutput({ID_PC_4_wire[31:0],ID_Intruction_wire[31:0]})
+
+);
+
+PipeRegister
+#(
+	.N(64)
+)
+PipeRegister_MEM_WB
+(
+
+	.clk(clk),
+	.reset(reset),
+	.enable(1),
+	.DataInput({PC_4_wire[31:0],Instruction_wire[31:0]}),
+
+	.DataOutput({ID_PC_4_wire[31:0],ID_Intruction_wire[31:0]})
+
+);
+
+
+
 //******************************************************************/
 //******************************************************************/
 //******************************************************************/
 //******************************************************************/
 //******************************************************************/
-Multiplexer2to1 //seleccionamos en que registro debemos escribir
+Multiplexer2to1 //seleccionamos en que registro debemos escribir #Trump
 #(
 	.NBits(5)
 )
